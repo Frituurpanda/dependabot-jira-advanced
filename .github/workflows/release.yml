@@ -12,13 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Install dependencies
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v4.1.0
         with:
-          node-version: "18.x"
+          node-version: "20.x"
       - name: Install dependencies
         run: yarn install
       - name: Release
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
-          GITHUB_TOKEN: ${{ secrets.carjessu_token }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release

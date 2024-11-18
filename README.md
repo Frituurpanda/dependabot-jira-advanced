@@ -9,15 +9,15 @@ See [action.yml](https://github.com/Orfium/critical-dependabot-jira/blob/master/
 ## Inputs
 The action needs a series of inputs to be set in order to function properly.
 
-| Item              | Description                                                                                                                        | Default                                                     |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| jira_base_url     | The base url of jira.                                                                                                              | -                                                           |
-| jira_user_email   | The email of jira user to open the bug.                                                                                            | -                                                           |
-| jira_project      | The jira project **key** that the bug will be opened.                                                                              | -                                                           |
-| jira_issue_type   | The jira ticket issue type.                                                                                                        | Bug                                                         |
-| jira_field        | Configurable field, supports all fields (including custom fields)                                                                  | dependabot-critical                                         |
-| jira_field_value  | Value for the above field.                                                                                                         | dependabot-critical                                         |
-| cvss_threshold    | The [CVSS](https://en.wikipedia.org/wiki/Common_Vulnerability_Scoring_System) threshold that you want to trigger the bug creation. | 9.0                                                         |
+| Item              | Description                                                                                                                        | Default             |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| jira_base_url     | The base url of jira.                                                                                                              | -                   |
+| jira_user_email   | The email of jira user to open the bug.                                                                                            | -                   |
+| jira_project      | The jira project **key** that the bug will be opened.                                                                              | -                   |
+| jira_issue_type   | The jira ticket issue type.                                                                                                        | Bug                 |
+| jira_field        | Configurable field, supports all fields (including custom fields)                                                                  | Components          |
+| jira_field_value  | Value for the above field.                                                                                                         | dependabot-critical |
+| cvss_threshold    | The [CVSS](https://en.wikipedia.org/wiki/Common_Vulnerability_Scoring_System) threshold that you want to trigger the bug creation. | 9.0                 |
 
 ### Secrets needed
 The repository needs two secrets, the `pat_token` which is a
